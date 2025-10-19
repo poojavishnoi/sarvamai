@@ -24357,52 +24357,62 @@
         setLoading(false);
       }
     };
-    return /* @__PURE__ */ import_react5.default.createElement("div", { className: "fixed z-50 flex flex-col bg-white shadow-2xl bottom-24 right-6 rounded-2xl chatbox" }, /* @__PURE__ */ import_react5.default.createElement(
+    return /* @__PURE__ */ import_react5.default.createElement(
       "div",
       {
-        style: { backgroundColor: `${config.theme.primaryColor}E6` },
-        className: "flex items-center justify-between p-3 text-white rounded-t-2xl"
+        className: "fixed z-50 flex flex-col bg-white shadow-2xl bottom-24 right-6 rounded-2xl ",
+        style: { width: "480px", height: "500px" }
       },
-      /* @__PURE__ */ import_react5.default.createElement("span", null, config.agent?.name),
-      /* @__PURE__ */ import_react5.default.createElement("button", { onClick: onClose }, "\u2716")
-    ), /* @__PURE__ */ import_react5.default.createElement("div", { className: "flex items-center justify-between p-3 overflow-y-auto text-sm text-gray-700 border-b" }, /* @__PURE__ */ import_react5.default.createElement("p", null, "\u{1F44B} Hello! How can I help you?"), /* @__PURE__ */ import_react5.default.createElement(
-      "select",
-      {
-        value: selectedLanguage,
-        onChange: (e) => setSelectedLanguage(e.target.value),
-        className: "px-2 py-1 border rounded"
-      },
-      languages.map((lang) => /* @__PURE__ */ import_react5.default.createElement("option", { key: lang.code, value: lang.code }, lang.label))
-    )), chatMode ? /* @__PURE__ */ import_react5.default.createElement(AiChatFlow_default, { messages, loading }) : /* @__PURE__ */ import_react5.default.createElement(AiVoiceFlow_default, { language: selectedLanguage }), /* @__PURE__ */ import_react5.default.createElement("div", { className: "flex items-center gap-2 p-2 border-t" }, config.enableVoice && /* @__PURE__ */ import_react5.default.createElement(
-      "div",
-      {
-        style: { backgroundColor: `${config.theme.primaryColor}E6` },
-        className: "p-2 text-white rounded-full cursor-pointer",
-        onClick: () => {
-          setChatMode((prev) => !prev);
-          setInput("");
+      /* @__PURE__ */ import_react5.default.createElement(
+        "div",
+        {
+          style: { backgroundColor: `${config.theme.primaryColor}E6` },
+          className: "flex items-center justify-between p-3 text-white rounded-t-2xl"
+        },
+        /* @__PURE__ */ import_react5.default.createElement("span", null, config.agent?.name),
+        /* @__PURE__ */ import_react5.default.createElement("button", { onClick: onClose }, "\u2716")
+      ),
+      /* @__PURE__ */ import_react5.default.createElement("div", { className: "flex items-center justify-between p-3 overflow-y-auto text-sm text-gray-700 border-b" }, /* @__PURE__ */ import_react5.default.createElement("p", null, "\u{1F44B} Hello! How can I help you?"), /* @__PURE__ */ import_react5.default.createElement(
+        "select",
+        {
+          value: selectedLanguage,
+          onChange: (e) => setSelectedLanguage(e.target.value),
+          className: "px-2 py-1 border rounded"
+        },
+        languages.map((lang) => /* @__PURE__ */ import_react5.default.createElement("option", { key: lang.code, value: lang.code }, lang.label))
+      )),
+      chatMode ? /* @__PURE__ */ import_react5.default.createElement(AiChatFlow_default, { messages, loading }) : /* @__PURE__ */ import_react5.default.createElement(AiVoiceFlow_default, { language: selectedLanguage }),
+      /* @__PURE__ */ import_react5.default.createElement("div", { className: "flex items-center gap-2 p-2 border-t" }, config.enableVoice && /* @__PURE__ */ import_react5.default.createElement(
+        "div",
+        {
+          style: { backgroundColor: `${config.theme.primaryColor}E6` },
+          className: "p-2 text-white rounded-full cursor-pointer",
+          onClick: () => {
+            setChatMode((prev) => !prev);
+            setInput("");
+          }
+        },
+        chatMode ? /* @__PURE__ */ import_react5.default.createElement(MdKeyboardVoice, { size: 20 }) : /* @__PURE__ */ import_react5.default.createElement(MdOutlineChat, { size: 20 })
+      ), /* @__PURE__ */ import_react5.default.createElement(
+        "input",
+        {
+          type: "text",
+          disabled: !chatMode,
+          value: input,
+          placeholder: "Type a message...",
+          className: "flex-1 px-3 py-1 text-sm border rounded-full",
+          onChange: (e) => setInput(e.target.value)
         }
-      },
-      chatMode ? /* @__PURE__ */ import_react5.default.createElement(MdKeyboardVoice, { size: 20 }) : /* @__PURE__ */ import_react5.default.createElement(MdOutlineChat, { size: 20 })
-    ), /* @__PURE__ */ import_react5.default.createElement(
-      "input",
-      {
-        type: "text",
-        disabled: !chatMode,
-        value: input,
-        placeholder: "Type a message...",
-        className: "flex-1 px-3 py-1 text-sm border rounded-full",
-        onChange: (e) => setInput(e.target.value)
-      }
-    ), /* @__PURE__ */ import_react5.default.createElement(
-      "button",
-      {
-        onClick: handleSend,
-        style: { backgroundColor: `${config.theme.primaryColor}E6` },
-        className: "px-3 py-1 text-white rounded-full"
-      },
-      "Send"
-    )));
+      ), /* @__PURE__ */ import_react5.default.createElement(
+        "button",
+        {
+          onClick: handleSend,
+          style: { backgroundColor: `${config.theme.primaryColor}E6` },
+          className: "px-3 py-1 text-white rounded-full"
+        },
+        "Send"
+      ))
+    );
   };
   var ChatBox_default = ChatBox;
 

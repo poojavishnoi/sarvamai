@@ -35174,7 +35174,8 @@
       "div",
       {
         className:
-          "fixed z-50 flex flex-col bg-white shadow-2xl bottom-24 right-6 rounded-2xl chatbox",
+          "fixed z-50 flex flex-col bg-white shadow-2xl bottom-24 right-6 rounded-2xl ",
+        style: { width: "480px", height: "500px" },
       },
       /* @__PURE__ */ import_react5.default.createElement(
         "div",
