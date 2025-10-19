@@ -61,7 +61,7 @@ const ChatBox = ({ onClose, config }) => {
   };
 
   return (
-    <div className="fixed bottom-24 right-6 h-[36rem] min-w-[30rem] bg-white shadow-2xl rounded-2xl flex flex-col z-50">
+    <div className="fixed z-50 flex flex-col bg-white shadow-2xl bottom-24 right-6 hw-96 min-h-96 rounded-2xl">
       <div
         style={{ backgroundColor: `${config.theme.primaryColor}E6` }}
         className="flex items-center justify-between p-3 text-white rounded-t-2xl"

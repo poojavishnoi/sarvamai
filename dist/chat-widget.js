@@ -24357,7 +24357,7 @@
         setLoading(false);
       }
     };
-    return /* @__PURE__ */ import_react5.default.createElement("div", { className: "fixed bottom-24 right-6 h-[36rem] min-w-[30rem] bg-white shadow-2xl rounded-2xl flex flex-col z-50" }, /* @__PURE__ */ import_react5.default.createElement(
+    return /* @__PURE__ */ import_react5.default.createElement("div", { className: "fixed z-50 flex flex-col bg-white shadow-2xl bottom-24 right-6 hw-96 min-h-96 rounded-2xl" }, /* @__PURE__ */ import_react5.default.createElement(
       "div",
       {
         style: { backgroundColor: `${config.theme.primaryColor}E6` },
