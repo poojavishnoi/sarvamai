@@ -1,4 +1,6 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import ReactDOM from "react-dom/client";
+
 import ChatBox from "./ChatBox";
 
 import { CiChat1 } from "react-icons/ci";

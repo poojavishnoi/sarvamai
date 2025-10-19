@@ -1333,7 +1333,7 @@
           return dispatcher;
         }
         "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
-        var React7 = require_react(), Internals = {
+        var React9 = require_react(), Internals = {
           d: {
             f: noop2,
             r: function() {
@@ -1351,7 +1351,7 @@
           },
           p: 0,
           findDOMNode: null
-        }, REACT_PORTAL_TYPE = Symbol.for("react.portal"), ReactSharedInternals = React7.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
+        }, REACT_PORTAL_TYPE = Symbol.for("react.portal"), ReactSharedInternals = React9.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
         "function" === typeof Map && null != Map.prototype && "function" === typeof Map.prototype.forEach && "function" === typeof Set && null != Set.prototype && "function" === typeof Set.prototype.clear && "function" === typeof Set.prototype.forEach || console.error(
           "React depends on Map and Set built-in types. Make sure that you load a polyfill in older browsers. https://reactjs.org/link/react-polyfills"
         );
@@ -2886,7 +2886,7 @@
           "number" === type && getActiveElement(node.ownerDocument) === node || node.defaultValue === "" + value || (node.defaultValue = "" + value);
         }
         function validateOptionProps(element, props) {
-          null == props.value && ("object" === typeof props.children && null !== props.children ? React7.Children.forEach(props.children, function(child) {
+          null == props.value && ("object" === typeof props.children && null !== props.children ? React9.Children.forEach(props.children, function(child) {
             null == child || "string" === typeof child || "number" === typeof child || "bigint" === typeof child || didWarnInvalidChild || (didWarnInvalidChild = true, console.error(
               "Cannot infer the option value of complex children. Pass a `value` prop or use a plain string as children to <option>."
             ));
@@ -18518,14 +18518,14 @@
           ));
         }
         "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
-        var Scheduler = require_scheduler(), React7 = require_react(), ReactDOM2 = require_react_dom(), assign = Object.assign, REACT_LEGACY_ELEMENT_TYPE = Symbol.for("react.element"), REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler"), REACT_CONSUMER_TYPE = Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE = Symbol.for("react.lazy");
+        var Scheduler = require_scheduler(), React9 = require_react(), ReactDOM3 = require_react_dom(), assign = Object.assign, REACT_LEGACY_ELEMENT_TYPE = Symbol.for("react.element"), REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element"), REACT_PORTAL_TYPE = Symbol.for("react.portal"), REACT_FRAGMENT_TYPE = Symbol.for("react.fragment"), REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode"), REACT_PROFILER_TYPE = Symbol.for("react.profiler"), REACT_CONSUMER_TYPE = Symbol.for("react.consumer"), REACT_CONTEXT_TYPE = Symbol.for("react.context"), REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref"), REACT_SUSPENSE_TYPE = Symbol.for("react.suspense"), REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list"), REACT_MEMO_TYPE = Symbol.for("react.memo"), REACT_LAZY_TYPE = Symbol.for("react.lazy");
         Symbol.for("react.scope");
         var REACT_ACTIVITY_TYPE = Symbol.for("react.activity");
         Symbol.for("react.legacy_hidden");
         Symbol.for("react.tracing_marker");
         var REACT_MEMO_CACHE_SENTINEL = Symbol.for("react.memo_cache_sentinel");
         Symbol.for("react.view_transition");
-        var MAYBE_ITERATOR_SYMBOL = Symbol.iterator, REACT_CLIENT_REFERENCE = Symbol.for("react.client.reference"), isArrayImpl = Array.isArray, ReactSharedInternals = React7.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, ReactDOMSharedInternals = ReactDOM2.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, NotPending = Object.freeze({
+        var MAYBE_ITERATOR_SYMBOL = Symbol.iterator, REACT_CLIENT_REFERENCE = Symbol.for("react.client.reference"), isArrayImpl = Array.isArray, ReactSharedInternals = React9.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, ReactDOMSharedInternals = ReactDOM3.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, NotPending = Object.freeze({
           pending: false,
           data: null,
           method: null,
@@ -21313,7 +21313,7 @@
           }
         };
         (function() {
-          var isomorphicReactPackageVersion = React7.version;
+          var isomorphicReactPackageVersion = React9.version;
           if ("19.2.0" !== isomorphicReactPackageVersion)
             throw Error(
               'Incompatible React versions: The "react" and "react-dom" packages must have the exact same version. Instead got:\n  - react:      ' + (isomorphicReactPackageVersion + "\n  - react-dom:  19.2.0\nLearn more: https://react.dev/warnings/version-mismatch")
@@ -21454,14 +21454,15 @@
   });
 
   // src/index.js
-  var import_react8 = __toESM(require_react());
-  var import_client = __toESM(require_client());
+  var import_react9 = __toESM(require_react());
+  var import_client2 = __toESM(require_client());
 
   // src/App.js
   var import_react7 = __toESM(require_react());
 
   // src/components/ChatWidget.js
   var import_react6 = __toESM(require_react());
+  var import_client = __toESM(require_client());
 
   // node_modules/axios/lib/helpers/bind.js
   function bind(fn, thisArg) {
@@ -24421,7 +24422,7 @@
     };
     const [isOpen, setIsOpen] = (0, import_react6.useState)(false);
     const positionClasses = positionConfig[config?.position] || "bottom-6 right-6";
-    return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(
+    return /* @__PURE__ */ import_react6.default.createElement(import_react6.default.Fragment, null, /* @__PURE__ */ import_react6.default.createElement(
       "div",
       {
         onClick: () => setIsOpen(!isOpen),
@@ -24430,12 +24431,31 @@
         },
         className: `fixed ${positionClasses}  text-white w-14 h-14 rounded-xl flex items-center justify-center shadow-lg cursor-pointer hover:bg-orange-500 z-50`
       },
-      /* @__PURE__ */ React.createElement(CiChat1, { size: 30 })
-    ), /* @__PURE__ */ React.createElement("div", { className: "relative" }, isOpen && /* @__PURE__ */ React.createElement(ChatBox_default, { config, onClose: () => setIsOpen(false) })));
+      /* @__PURE__ */ import_react6.default.createElement(CiChat1, { size: 30 })
+    ), /* @__PURE__ */ import_react6.default.createElement("div", { className: "relative" }, isOpen && /* @__PURE__ */ import_react6.default.createElement(ChatBox_default, { config, onClose: () => setIsOpen(false) })));
   };
   var ChatWidget_default = ChatWidget;
 
   // src/App.js
+  var import_react8 = __toESM(require_react());
+  var ChatErrorBoundary = class extends import_react8.default.Component {
+    constructor(props) {
+      super(props);
+      this.state = { hasError: false };
+    }
+    static getDerivedStateFromError(error) {
+      return { hasError: true };
+    }
+    componentDidCatch(error, errorInfo) {
+      console.error("ChatWidget error:", error, errorInfo);
+    }
+    render() {
+      if (this.state.hasError) {
+        return /* @__PURE__ */ import_react8.default.createElement("div", { style: { padding: "1rem", color: "#fff", background: "#f56565" } }, "ChatWidget failed to load.");
+      }
+      return this.props.children;
+    }
+  };
   function App() {
     const config = window.AgentWidgetConfig || {
       position: "bottom-right",
@@ -24459,7 +24479,7 @@
         loadFont(mainFont);
       }
     }, [config?.theme?.fontFamily]);
-    return /* @__PURE__ */ React.createElement("div", { style: { fontFamily: config.theme.fontFamily }, className: "App" }, /* @__PURE__ */ React.createElement(ChatWidget_default, { config }));
+    return /* @__PURE__ */ import_react8.default.createElement("div", { style: { fontFamily: config.theme.fontFamily }, className: "App" }, /* @__PURE__ */ import_react8.default.createElement(ChatErrorBoundary, null, /* @__PURE__ */ import_react8.default.createElement(ChatWidget_default, { config })));
   }
   var App_default = App;
 
@@ -24467,8 +24487,8 @@
   var div = document.createElement("div");
   div.id = "ai-widget-root";
   document.body.appendChild(div);
-  import_client.default.createRoot(div).render(
-    /* @__PURE__ */ import_react8.default.createElement(import_react8.default.StrictMode, null, /* @__PURE__ */ import_react8.default.createElement(App_default, null))
+  import_client2.default.createRoot(div).render(
+    /* @__PURE__ */ import_react9.default.createElement(import_react9.default.StrictMode, null, /* @__PURE__ */ import_react9.default.createElement(App_default, null))
   );
 })();
 /*! Bundled license information:

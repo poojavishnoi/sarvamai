@@ -1,6 +1,37 @@
 import { useEffect } from "react";
 import "./App.css";
 import ChatWidget from "./components/ChatWidget";
+import React from "react";
+
+// Error Boundary Component
+class ChatErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error) {
+    // Update state so next render shows fallback UI
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    // You can log the error to an external service here
+    console.error("ChatWidget error:", error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div style={{ padding: "1rem", color: "#fff", background: "#f56565" }}>
+          ChatWidget failed to load.
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
+}
 
 function App() {
   const config = window.AgentWidgetConfig || {
@@ -30,7 +61,9 @@ function App() {
 
   return (
     <div style={{ fontFamily: config.theme.fontFamily }} className="App">
-      <ChatWidget config={config} />
+      <ChatErrorBoundary>
+        <ChatWidget config={config} />
+      </ChatErrorBoundary>
     </div>
   );
 }
