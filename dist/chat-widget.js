@@ -24297,14 +24297,14 @@
       const audioUrl = URL.createObjectURL(blob);
       setResponseAudio(audioUrl);
     };
-    return /* @__PURE__ */ React.createElement("div", { className: "flex flex-col items-center justify-center space-y-4 h-full p-4" }, /* @__PURE__ */ React.createElement(
+    return /* @__PURE__ */ import_react4.default.createElement("div", { className: "flex flex-col items-center justify-center h-full p-4 space-y-4" }, /* @__PURE__ */ import_react4.default.createElement(
       "button",
       {
         onClick: recording ? stopRecording : startRecording,
         className: `px-6 py-3 rounded-full font-semibold w-44 mb-4  ${recording ? "bg-red-500 text-white" : "bg-gray-100"}`
       },
       recording ? "Stop Recording" : "Start Talking"
-    ), /* @__PURE__ */ React.createElement("div", { className: "min-h-60" }, audioURL && /* @__PURE__ */ React.createElement("div", { className: "mt-4" }, /* @__PURE__ */ React.createElement("p", { className: "text-gray-600 text-sm mb-1" }, "Your voice input:"), /* @__PURE__ */ React.createElement("audio", { controls: true, src: audioURL, className: "w-64" })), responseAudio.length > 0 && /* @__PURE__ */ React.createElement("div", { className: "mt-4" }, /* @__PURE__ */ React.createElement("p", { className: "text-gray-600 text-sm mb-1" }, "AI reply:"), /* @__PURE__ */ React.createElement("audio", { controls: true, src: responseAudio, className: "w-64 my-2" }))));
+    ), /* @__PURE__ */ import_react4.default.createElement("div", { className: "min-h-60" }, audioURL && /* @__PURE__ */ import_react4.default.createElement("div", { className: "mt-4" }, /* @__PURE__ */ import_react4.default.createElement("p", { className: "mb-1 text-sm text-gray-600" }, "Your voice input:"), /* @__PURE__ */ import_react4.default.createElement("audio", { controls: true, src: audioURL, className: "w-64" })), responseAudio.length > 0 && /* @__PURE__ */ import_react4.default.createElement("div", { className: "mt-4" }, /* @__PURE__ */ import_react4.default.createElement("p", { className: "mb-1 text-sm text-gray-600" }, "AI reply:"), /* @__PURE__ */ import_react4.default.createElement("audio", { controls: true, src: responseAudio, className: "w-64 my-2" }))));
   }
   var AiVoiceFlow_default = AiVoiceFlow;
 

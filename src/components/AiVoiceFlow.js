@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 
 function AiVoiceFlow({ language }) {
   const [recording, setRecording] = useState(false);
@@ -106,7 +106,7 @@ function AiVoiceFlow({ language }) {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center space-y-4 h-full p-4">
+    <div className="flex flex-col items-center justify-center h-full p-4 space-y-4">
       <button
         onClick={recording ? stopRecording : startRecording}
         className={`px-6 py-3 rounded-full font-semibold w-44 mb-4  ${
@@ -118,14 +118,14 @@ function AiVoiceFlow({ language }) {
       <div className="min-h-60">
         {audioURL && (
           <div className="mt-4">
-            <p className="text-gray-600 text-sm mb-1">Your voice input:</p>
+            <p className="mb-1 text-sm text-gray-600">Your voice input:</p>
             <audio controls src={audioURL} className="w-64" />
           </div>
         )}
 
         {responseAudio.length > 0 && (
           <div className="mt-4">
-            <p className="text-gray-600 text-sm mb-1">AI reply:</p>
+            <p className="mb-1 text-sm text-gray-600">AI reply:</p>
             <audio controls src={responseAudio} className="w-64 my-2" />
           </div>
         )}
