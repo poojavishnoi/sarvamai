@@ -27481,7 +27481,7 @@
           __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
         var Scheduler = require_scheduler(),
           React9 = require_react(),
-          ReactDOM3 = require_react_dom(),
+          ReactDOM2 = require_react_dom(),
           assign = Object.assign,
           REACT_LEGACY_ELEMENT_TYPE = Symbol.for("react.element"),
           REACT_ELEMENT_TYPE = Symbol.for("react.transitional.element"),
@@ -27508,7 +27508,7 @@
           ReactSharedInternals =
             React9.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE,
           ReactDOMSharedInternals =
-            ReactDOM3.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE,
+            ReactDOM2.__DOM_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE,
           NotPending = Object.freeze({
             pending: false,
             data: null,
@@ -31541,14 +31541,13 @@
 
   // src/index.js
   var import_react9 = __toESM(require_react());
-  var import_client2 = __toESM(require_client());
+  var import_client = __toESM(require_client());
 
   // src/App.js
   var import_react7 = __toESM(require_react());
 
   // src/components/ChatWidget.js
   var import_react6 = __toESM(require_react());
-  var import_client = __toESM(require_client());
 
   // node_modules/axios/lib/helpers/bind.js
   function bind(fn, thisArg) {
@@ -35406,7 +35405,7 @@
   var div = document.createElement("div");
   div.id = "ai-widget-root";
   document.body.appendChild(div);
-  import_client2.default
+  import_client.default
     .createRoot(div)
     .render(
       /* @__PURE__ */ import_react9.default.createElement(
