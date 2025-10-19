@@ -64,18 +64,18 @@ const ChatBox = ({ onClose, config }) => {
     <div className="fixed bottom-24 right-6 h-[36rem] min-w-[30rem] bg-white shadow-2xl rounded-2xl flex flex-col z-50">
       <div
         style={{ backgroundColor: `${config.theme.primaryColor}E6` }}
-        className="flex justify-between items-center text-white p-3 rounded-t-2xl"
+        className="flex items-center justify-between p-3 text-white rounded-t-2xl"
       >
         <span>{config.agent?.name}</span>
         <button onClick={onClose}>✖</button>
       </div>
 
-      <div className="overflow-y-auto p-3 text-sm border-b text-gray-700 flex items-center justify-between">
+      <div className="flex items-center justify-between p-3 overflow-y-auto text-sm text-gray-700 border-b">
         <p>👋 Hello! How can I help you?</p>
         <select
           value={selectedLanguage}
           onChange={(e) => setSelectedLanguage(e.target.value)}
-          className="border rounded px-2 py-1"
+          className="px-2 py-1 border rounded"
         >
           {languages.map((lang) => (
             <option key={lang.code} value={lang.code}>
@@ -91,11 +91,11 @@ const ChatBox = ({ onClose, config }) => {
         <AiVoiceFlow language={selectedLanguage} />
       )}
 
-      <div className="border-t items-center p-2 flex gap-2">
+      <div className="flex items-center gap-2 p-2 border-t">
         {config.enableVoice && (
           <div
             style={{ backgroundColor: `${config.theme.primaryColor}E6` }}
-            className="text-white p-2 rounded-full cursor-pointer"
+            className="p-2 text-white rounded-full cursor-pointer"
             onClick={() => {
               setChatMode((prev) => !prev);
               setInput("");
@@ -114,14 +114,14 @@ const ChatBox = ({ onClose, config }) => {
           disabled={!chatMode}
           value={input}
           placeholder="Type a message..."
-          className="border rounded-full flex-1 px-3 py-1 text-sm"
+          className="flex-1 px-3 py-1 text-sm border rounded-full"
           onChange={(e) => setInput(e.target.value)}
         />
 
         <button
           onClick={handleSend}
           style={{ backgroundColor: `${config.theme.primaryColor}E6` }}
-          className="text-white px-3 py-1 rounded-full"
+          className="px-3 py-1 text-white rounded-full"
         >
           Send
         </button>

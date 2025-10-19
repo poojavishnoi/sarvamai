@@ -4,10 +4,10 @@ esbuild
   .build({
     entryPoints: ["src/index.js"],
     bundle: true,
-    minify: true,
+    minify: false,
     outfile: "dist/chat-widget.js",
     format: "iife",
-    globalName: "ChatWidget",
+    platform: "browser",
     loader: { ".js": "jsx" },
   })
   .catch(() => process.exit(1));
