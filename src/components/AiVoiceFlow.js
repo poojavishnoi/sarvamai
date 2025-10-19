@@ -48,7 +48,7 @@ function AiVoiceFlow({ language }) {
   };
 
   const sendAudioToSarvam = async (audioBlob) => {
-    const API_KEY = process.env.REACT_APP_SARVAM_AI;
+    const API_KEY = "sk_ugx1miow_2QNjeoqO4WAa70ZSficQtddQ";
 
     const formData = new FormData();
     formData.append("file", audioBlob, "audio.webm");

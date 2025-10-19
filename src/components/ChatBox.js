@@ -17,6 +17,8 @@ const ChatBox = ({ onClose, config }) => {
   ];
 
   const handleSend = async () => {
+    const API_KEY = "sk_ugx1miow_2QNjeoqO4WAa70ZSficQtddQ";
+
     if (!input.trim()) return;
 
     const userMessage = { role: "user", content: input };
@@ -35,7 +37,7 @@ const ChatBox = ({ onClose, config }) => {
 
       const headers = {
         "Content-Type": "application/json",
-        Authorization: `Bearer sk_bxecnrcc_BQhILl6F5JySzjvLRAKIynNJ`,
+        Authorization: `Bearer ${API_KEY}`,
       };
 
       const response = await axios.post(

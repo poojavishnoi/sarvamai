@@ -35019,7 +35019,7 @@
       setRecording(false);
     };
     const sendAudioToSarvam = async (audioBlob) => {
-      const API_KEY = process.env.REACT_APP_SARVAM_AI;
+      const API_KEY = "sk_ugx1miow_2QNjeoqO4WAa70ZSficQtddQ";
       const formData = new FormData();
       formData.append("file", audioBlob, "audio.webm");
       formData.append("language_code", language);
@@ -35133,6 +35133,7 @@
       { code: "hi-IN", label: "Hindi" },
     ];
     const handleSend = async () => {
+      const API_KEY = "sk_ugx1miow_2QNjeoqO4WAa70ZSficQtddQ";
       if (!input.trim()) return;
       const userMessage = { role: "user", content: input };
       const updatedMessages = [...messages, { sender: "user", text: input }];
@@ -35148,7 +35149,7 @@
         };
         const headers = {
           "Content-Type": "application/json",
-          Authorization: `Bearer sk_bxecnrcc_BQhILl6F5JySzjvLRAKIynNJ`,
+          Authorization: `Bearer ${API_KEY}`,
         };
         const response = await axios_default.post(
           "https://api.sarvam.ai/v1/chat/completions",
