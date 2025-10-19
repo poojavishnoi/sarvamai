@@ -35075,7 +35075,7 @@
         "button",
         {
           onClick: recording ? stopRecording : startRecording,
-          className: `px-6 py-3 rounded-full font-semibold w-44 mb-4  ${
+          className: `px-6 py-3 rounded-full font-semibold w-44  ${
             recording ? "bg-red-500 text-white" : "bg-gray-100"
           }`,
         },
@@ -35083,11 +35083,11 @@
       ),
       /* @__PURE__ */ import_react4.default.createElement(
         "div",
-        { className: "min-h-60" },
+        { className: "h-full " },
         audioURL &&
           /* @__PURE__ */ import_react4.default.createElement(
             "div",
-            { className: "mt-4" },
+            { className: "mt-1 " },
             /* @__PURE__ */ import_react4.default.createElement(
               "p",
               { className: "mb-1 text-sm text-gray-600" },
@@ -35102,7 +35102,7 @@
         responseAudio.length > 0 &&
           /* @__PURE__ */ import_react4.default.createElement(
             "div",
-            { className: "mt-4" },
+            { className: "mt-1" },
             /* @__PURE__ */ import_react4.default.createElement(
               "p",
               { className: "mb-1 text-sm text-gray-600" },
@@ -35174,7 +35174,7 @@
       "div",
       {
         className:
-          "fixed z-50 flex flex-col bg-white shadow-2xl bottom-24 right-6 hw-96 min-h-96 rounded-2xl",
+          "fixed z-50 flex flex-col bg-white shadow-2xl bottom-24 right-6 rounded-2xl chatbox",
       },
       /* @__PURE__ */ import_react5.default.createElement(
         "div",

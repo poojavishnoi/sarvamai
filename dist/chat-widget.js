@@ -24301,10 +24301,10 @@
       "button",
       {
         onClick: recording ? stopRecording : startRecording,
-        className: `px-6 py-3 rounded-full font-semibold w-44 mb-4  ${recording ? "bg-red-500 text-white" : "bg-gray-100"}`
+        className: `px-6 py-3 rounded-full font-semibold w-44  ${recording ? "bg-red-500 text-white" : "bg-gray-100"}`
       },
       recording ? "Stop Recording" : "Start Talking"
-    ), /* @__PURE__ */ import_react4.default.createElement("div", { className: "min-h-60" }, audioURL && /* @__PURE__ */ import_react4.default.createElement("div", { className: "mt-4" }, /* @__PURE__ */ import_react4.default.createElement("p", { className: "mb-1 text-sm text-gray-600" }, "Your voice input:"), /* @__PURE__ */ import_react4.default.createElement("audio", { controls: true, src: audioURL, className: "w-64" })), responseAudio.length > 0 && /* @__PURE__ */ import_react4.default.createElement("div", { className: "mt-4" }, /* @__PURE__ */ import_react4.default.createElement("p", { className: "mb-1 text-sm text-gray-600" }, "AI reply:"), /* @__PURE__ */ import_react4.default.createElement("audio", { controls: true, src: responseAudio, className: "w-64 my-2" }))));
+    ), /* @__PURE__ */ import_react4.default.createElement("div", { className: "h-full " }, audioURL && /* @__PURE__ */ import_react4.default.createElement("div", { className: "mt-1 " }, /* @__PURE__ */ import_react4.default.createElement("p", { className: "mb-1 text-sm text-gray-600" }, "Your voice input:"), /* @__PURE__ */ import_react4.default.createElement("audio", { controls: true, src: audioURL, className: "w-64" })), responseAudio.length > 0 && /* @__PURE__ */ import_react4.default.createElement("div", { className: "mt-1" }, /* @__PURE__ */ import_react4.default.createElement("p", { className: "mb-1 text-sm text-gray-600" }, "AI reply:"), /* @__PURE__ */ import_react4.default.createElement("audio", { controls: true, src: responseAudio, className: "w-64 my-2" }))));
   }
   var AiVoiceFlow_default = AiVoiceFlow;
 
@@ -24357,7 +24357,7 @@
         setLoading(false);
       }
     };
-    return /* @__PURE__ */ import_react5.default.createElement("div", { className: "fixed z-50 flex flex-col bg-white shadow-2xl bottom-24 right-6 hw-96 min-h-96 rounded-2xl" }, /* @__PURE__ */ import_react5.default.createElement(
+    return /* @__PURE__ */ import_react5.default.createElement("div", { className: "fixed z-50 flex flex-col bg-white shadow-2xl bottom-24 right-6 rounded-2xl chatbox" }, /* @__PURE__ */ import_react5.default.createElement(
       "div",
       {
         style: { backgroundColor: `${config.theme.primaryColor}E6` },

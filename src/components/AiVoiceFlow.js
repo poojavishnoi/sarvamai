@@ -109,22 +109,22 @@ function AiVoiceFlow({ language }) {
     <div className="flex flex-col items-center justify-center h-full p-4 space-y-4">
       <button
         onClick={recording ? stopRecording : startRecording}
-        className={`px-6 py-3 rounded-full font-semibold w-44 mb-4  ${
+        className={`px-6 py-3 rounded-full font-semibold w-44  ${
           recording ? "bg-red-500 text-white" : "bg-gray-100"
         }`}
       >
         {recording ? "Stop Recording" : "Start Talking"}
       </button>
-      <div className="min-h-60">
+      <div className="h-full ">
         {audioURL && (
-          <div className="mt-4">
+          <div className="mt-1 ">
             <p className="mb-1 text-sm text-gray-600">Your voice input:</p>
             <audio controls src={audioURL} className="w-64" />
           </div>
         )}
 
         {responseAudio.length > 0 && (
-          <div className="mt-4">
+          <div className="mt-1">
             <p className="mb-1 text-sm text-gray-600">AI reply:</p>
             <audio controls src={responseAudio} className="w-64 my-2" />
           </div>

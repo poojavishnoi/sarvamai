@@ -1,3 +1,8 @@
 .App {
   text-align: center;
 }
+
+.chatbox {
+  width: 480px;
+  height: 500px;
+}
